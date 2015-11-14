@@ -19,6 +19,130 @@
 </nav>
 
 <div class="container">
+  <ul class="nav nav-pills" role="tablist">
+    <li class="active"><a href="#village" data-toggle="tab">村</a></li>
+    <li><a href="#forest" data-toggle="tab">森</a></li>
+    <li><a href="#outskirts" data-toggle="tab">街外れ</a></li>
+    <li><a href="#valley" data-toggle="tab">渓谷</a></li>
+  </ul>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="clock">
+        <span class="clock-day">day 2(F)</span>
+        <span class="clock-time" id="clock-time"></span>
+      </div>
+
+      <br>
+
+      <div class="calendar">
+        <table class="table">
+          <caption>month 1</caption>
+          <thead>
+            <tr>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>F</th>
+              <th>S</th>
+            </tr>
+          </thead>
+          <tbody id="calendar">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-sm-8">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="village">
+          <div class="group">
+            <div class="group-header">
+              <h4>村</h4>
+            </div>
+            <div class="group-body">
+              <ul class="nav nav-pills">
+                <li class="active"><a href="#board" data-toggle="tab">看板</a></li>
+                <li><a href="#shop" data-toggle="tab">雑貨屋</a></li>
+                <li><a href="#outside" data-toggle="tab">村の外へ</a></li>
+              </ul>
+
+              <hr>
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="board">
+                  <p>住人 10人</p>
+                  <p>子どもたちの間で、魔女隠しという新しい遊びが流行っているようです。</p>
+
+                  <button type="button" class="btn btn-info">ここに住む(-100)</button>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="shop"></div>
+                <div role="tabpanel" class="tab-pane fade" id="outside">
+                  <button type="button" class="btn btn-default">森へ(-150)</button>
+                  <button type="button" class="btn btn-default">街外れへ(-50)</button>
+                  <button type="button" class="btn btn-default">渓谷へ(-250)</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="forest">
+          <div class="group">
+            <div class="group-header">
+              <h4>森</h4>
+            </div>
+            <div class="group-body">
+              <button type="button" class="btn btn-primary" id="forest-collecting">伐採(5sec)</button>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="outskirts">
+          <div class="group">
+            <div class="group-header">
+              <h4>街外れ</h4>
+            </div>
+            <div class="group-body">
+              <button type="button" class="btn btn-default" id="outskirts-time">時間効率+</button>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="valley">
+          <div class="group">
+            <div class="group-header">
+              <h4>渓谷</h4>
+            </div>
+            <div class="group-body">
+              <button type="button" class="btn btn-primary" id="valley-mining">採掘(5sec)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">迷い込んだアリス</h3>
+        </div>
+        <div class="panel-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="alice-status-table">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="js/jquery.js"></script>
